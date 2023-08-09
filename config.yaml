@@ -4,9 +4,6 @@ baseURL: /
 disablePathToLower: true  # 禁用路径小写化
 enableGitInfo: true  # 启用 Git 信息
 
-
-
-
 # # Needed for mermaid/katex shortcodes
 markup:
   goldmark:
