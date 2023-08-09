@@ -1,0 +1,66 @@
+name: notion_posts_to_github
+on:
+  schedule:
+    - cron: '00 16 * * *'
+  workflow_dispatch:
+jobs:
+  auto-sync-from-notion-to-github:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - run: npm install
+      - env:
+          NOTION_KEY: ${{ secrets.NOTION_KEY }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+        run: npm run notion:post
+      - uses: fregante/setup-git-user@v1
+      - name: Git Commit Push Action
+        # You may pin to the exact commit or the version.
+        # uses: GuillaumeFalourd/git-commit-push@205c043bca2f932f7a48a28a8d619ba30eb84baf
+        uses: GuillaumeFalourd/git-commit-push@v1.3
+        with:
+          # Committer's email address
+          email: mantyke@github.com
+          # Committer's username
+          name: GitHub Actions
+          # Commit message
+          commit_message: GitHub Actions Auto Update From Notion
+          # Branch to push the changes back to
+          target_branch: main
+          # Files to add separated by space
+          files: content/*.md
+    #      access_token: ${{secrets.PERSON_GITHUB_TOKEN}}
+          # Repository url to push the code to
+#           remote_repository: # default is origin
+          # Whether to perform force push
+#           force: # default is 0
+          # Whether to allow empty commit
+#           empty: # optional, default is 0
+          # Whether to use --tags
+#           tags: # optional, default is 0
+#       - run: |
+#           git config --global user.email "scarsu001@github.com"
+#           git config --global user.name "GitHub Actions"
+#           git add content/**/*.md
+#           git commit -m 'GitHub Actions Auto Update From Notion'
+#           git remote set-url origin https://github.com/scarsu/scarsu.com
+#           git push
+#       - uses: EndBug/add-and-commit@v9
+#         with:
+#           add: 'content/**/*.md'
+#           # add: '*'
+#           author_name: scarsu
+#           author_email: scarsu001@github.com
+#           fetch: false
+#           message: 'GitHub Actions Auto Update From Notion'
+      # - name: Commit changes
+      #   run: |
+      #     git config --global user.email "scarsu001@github.com"
+      #     git config --global user.name "GitHub Actions"
+      #     git add ./content/**/*.md
+      #     git commit -m "GitHub Actions Auto Update From Notion"
+      #     git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+      #     git push
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
