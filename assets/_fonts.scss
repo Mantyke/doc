@@ -1,10 +1,11 @@
 // Replace this with your own font imports!
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=IBM+Plex+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&display=swap');
 
 :root {
-  --font-body: "IBM Plex Sans", sans-serif;
-  --font-header: "IBM Plex Sans", sans-serif;
-  --font-mono: "Fira Code", monospace;
+  --font-body: "Noto Serif SC", sans-serif;
+  --font-header: "Noto Serif SC", sans-serif;
+  --font-mono: "Noto Serif SC", monospace;
 }
 
 // Example local font declaration
