@@ -27,7 +27,7 @@ h3,
 h4,
 h5 {
   font-weight: $body-font-weight;
-  color: black;
+  color: black!important;
 }
 
 a {
@@ -233,10 +233,10 @@ body[dir="rtl"] .book-menu {
   font-size: $font-size-12;
 
   .book-toc-content {
-    width: $toc-width;
+    width: 18rem;
     padding: $padding-16;
-
     @include fixed;
+    font-size: larger;
   }
 
   img {
