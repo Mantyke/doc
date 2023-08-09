@@ -7,6 +7,11 @@
   > :first-child {
     margin-top: 0;
   }
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {padding-top: 30px;}
 
   h1,
   h2,
@@ -15,6 +20,7 @@
   h5,
   h6 {
     font-weight: normal;
+    color: var(--gray);
     line-height: 1;
     margin-top: 1.5em;
     margin-bottom: $padding-16;
@@ -164,8 +170,8 @@
     padding: $padding-16;
     border: none !important;
     font-family: var(--font-body);
-    font-weight: bold;
-    color: var(--dark);
+    font-weight: 400;
+    color: var(--gray);
     // border: $padding-1 solid var(--gray-200);
     // border-radius: $border-radius;
 

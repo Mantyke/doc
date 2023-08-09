@@ -1,22 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>123 on </title>
-    <link>https://amethyst.bencuan.me/tags/123/</link>
-    <description>Recent content in 123 on </description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://amethyst.bencuan.me/tags/123/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Custom Domain</title>
-      <link>https://amethyst.bencuan.me/setup/custom-Domain/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://amethyst.bencuan.me/setup/custom-Domain/</guid>
-      <description>Registrar#This step is only applicable if you are using a custom domain! If you are using a &amp;lt;YOUR-USERNAME&amp;gt;.github.io domain, you can skip this step.
-For this last bit to take effect, you also need to create a CNAME record with the DNS provider you register your domain with (i.e. NameCheap, Google Domains).
-GitHub has some documentation on this, but the tldr; is to
-Go to your forked repository (github.</description>
-    </item>
-    
-  </channel>
-</rss>

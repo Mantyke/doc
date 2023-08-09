@@ -1,8 +1,8 @@
 baseURL: /
 
 # Book configuration
-disablePathToLower: true  # 禁用路径小写化
-enableGitInfo: true  # 启用 Git 信息
+disablePathToLower: true
+enableGitInfo: true
 
 # # Needed for mermaid/katex shortcodes
 markup:
@@ -12,131 +12,135 @@ markup:
   tableOfContents:
     startLevel: 1
 
-# 多语言模式配置
-# 有不同的选项来翻译文件
-# 参见 https://gohugo.io/content-management/multilingual/#translation-by-filename
-# 和 https://gohugo.io/content-management/multilingual/#translation-by-content-directory
+# Multi-lingual mode config
+# There are different options to translate files
+# See https://gohugo.io/content-management/multilingual/#translation-by-filename
+# And https://gohugo.io/content-management/multilingual/#translation-by-content-directory
 
-# 侧边栏菜单的附加链接
+# Sidebar menu additional links
 menu:
   # before:
   #   - name: "Sample"
   #     url: "https://google.com"
   #     weight: 10
   #after:
-   # - name: "Github"
-   #   url: "https://github.com/64bitpandas/amethyst"
-   #   weight: 10
+    #- name: "Github"
+    #  url: "https://github.com/64bitpandas/amethyst"
+    #  weight: 10
 
 params:
 
-  name: Mantyke  # 网站名称
-  title: 小球飞鲸  # 网站标题
+  name: Mantyke
+  title: 小球飞鲸
 
-  # OPTIONAL: 自定义 Favicon 的位置
+  # OPTIONAL: custom favicon location
   # favicon: 'location/to/favicon.png'
 
-  # 是否显示悬停链接预览卡片
+  # whether to display on-hover link preview cards
   enableLinkPreview: true
 
-  # 启用渲染 LaTeX 块
-  # （由单个或双重美元符号括起来）
+  # Enable rendering of LaTeX blocks
+  # (surrounded by either single or double dollar signs)
   enableLatex: true
 
-  # 是否渲染代码块的标题
+  # whether to render titles for code blocks
   enableCodeBlockTitle: true
 
-  # 是否渲染代码块的复制按钮
+  # whether to render copy buttons for code blocks
   enableCodeBlockCopy: true
 
-  # 是否渲染 Callouts
+  # whether to render callouts
   enableCallouts: true
 
-  # 显示页脚，包括相关链接和图形视图
-  enableFooter: true
+  # Show footer, including backlinks and graph view
+  enableFooter: false
 
-  # 页面的反向链接是否显示它们被提及的上下文
+  # whether backlinks of pages should show the context in which
+  # they were mentioned
   enableContextualBacklinks: true
 
-  # 是否在首页显示最近笔记的部分
-  enableRecentNotes: true
+  # whether to show a section of recent notes on the home page
+  enableRecentNotes: false
 
-  # 是否在最后编辑字段旁边显示一个“编辑”按钮，链接到 GitHub
+  # whether to display an 'edit' button next to the last edited field
+  # that links to github
   enableGitHubEdit: true
 
-  # 是否渲染 Mermaid 图表
+  # whether to render mermaid diagrams
   enableMermaid: true
 
-  # 您的 GitHub 仓库链接
-  GitHubLink: https://github.com/Mantyke/doc
+  # Link to your Github repo
+  GitHubLink: https://github.com/64bitpandas/amethyst
 
-  # 搜索（进行中）
+  # Search (WIP)
   search:
-    enableSemanticSearch: true
+    enableSemanticSearch: false
     operandApiKey: "REPLACE-WITH-YOUR-OPERAND-API-KEY"
     operandIndexId: "REPLACE-WITH-YOUR-OPERAND-INDEX-ID"
 
-  # 网站描述和标题
+  # Site description and title
   description:
-    近世有人居海渚者，年年八月有浮槎去來，不失期
+    舊説雲天河與海通。近世有人居海渚者，年年八月有浮槎去來，不失期
 
   
-  # 页脚链接
+  # Footer links
   #links:
     #- link_name: Website
     #  link: https://bencuan.me
     #- link_name: Blog
     #  link: https://blog.bencuan.me
 
-  # （可选，默认为 true）控制在页面右侧显示目录的可见性。
-  # 可以使用 markup.tableOfContents 设置指定起始和结束级别。
-  # 您还可以在页面的前置元数据中指定此参数。
+  # (Optional, default true) Controls table of contents visibility on right side of pages.
+  # Start and end levels can be controlled with markup.tableOfContents setting.
+  # You can also specify this parameter per page in front matter.
   BookToC: true
 
-  # （可选，默认为 none）设置书籍的徽标路径。
-  # 如果徽标是 /static/logo.png，则路径为 logo.png
+  # (Optional, default none) Set the path to a logo for the book. If the logo is
+  # /static/logo.png then the path would be logo.png
   # BookLogo: /logo.png
 
-  # （可选，默认为 none）将渲染为侧边栏菜单的叶子束。
-  # 如果未指定，将使用文件结构和权重
+  # (Optional, default none) Set leaf bundle to render as side menu
+  # When not specified file structure and weights will be used
   # BookMenuBundle: /menu
 
-  # （可选，默认为 /docs）指定根页面以将子页面渲染为菜单。
-  # 页面通过 .GetPage 函数来解析：https://gohugo.io/functions/getpage/
-  # 为了向后兼容性，您可以将 '*' 设置为将所有部分渲染为菜单。相当于 '/'
+  # (Optional, default docs) Specify root page to render child pages as menu.
+  # Page is resoled by .GetPage function: https://gohugo.io/functions/getpage/
+  # For backward compatibility you can set '*' to render all sections to menu. Acts same as '/'
   BookSection: "/"
 
-  # 设置源代码仓库位置。
-  # 用于“最后修改”和“编辑此页面”链接。
-  BookRepo: https://github.com/Mantyke/doc
+  # Set source repository location.
+  # Used for 'Last Modified' and 'Edit this page' links.
+  BookRepo: https://github.com/64bitpandas/amethyst
 
-  # （可选，默认为 'commit'）指定“doc”页面类型的页面的链接到最后修改的提交哈希的提交部分。
-  # 需要 'BookRepo' 参数。
-  # 值用于构建一个 URL，包含 BookRepo/BookCommitPath/<commit-hash>
-  # GitHub 使用 'commit'，Bitbucket 使用 'commits'
+  # (Optional, default 'commit') Specifies commit portion of the link to the page's last modified
+  # commit hash for 'doc' page type.
+  # Requires 'BookRepo' param.
+  # Value used to construct a URL consisting of BookRepo/BookCommitPath/<commit-hash>
+  # Github uses 'commit', Bitbucket uses 'commits'
   # BookCommitPath: commit
 
-  # 为“doc”页面类型启用“编辑此页面”链接。
-  # 默认情况下被禁用。取消注释以启用。需要 'BookRepo' 参数。
-  # 编辑路径必须指向存储库的根目录。
+  # Enable "Edit this page" links for 'doc' page type.
+  # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
+  # Edit path must point to root directory of repo.
   BookEditPath: edit/main/exampleSite
 
-  # 配置页面上使用的日期格式
-  # - 在 git 信息中
-  # - 在博文中
+  # Configure the date format used on the pages
+  # - In git information
+  # - In blog posts
   BookDateFormat: "January 2, 2006"
 
 
-  # （可选，默认为 true）在页面上启用评论模板
-  # 默认情况下，partials/docs/comments.html 包括 Disqus 模板
-  # 可以通过页面的前置元数据中的相同参数进行覆盖
+  # (Optional, default true) Enables comments template on pages
+  # By default partals/docs/comments.html includes Disqus template
+  # See https://gohugo.io/content-management/comments/#configure-disqus
+  # Can be overwritten by same param in page frontmatter
   BookComments: true
 
-  # /!\ 这是一个实验性功能，可能随时被删除或更改
-  # （可选，实验性，默认为 false）仅在存在翻译时为翻译启用下拉菜单。
+  # /!\ This is an experimental feature, might be removed or changed at any time
+  # (Optional, experimental, default false) Enables a drop-down menu for translations only if a translation is present.
   BookTranslatedOnly: false
 
-  # 不要更改此项
+  # Don't change this
   enableSPA: false
   BookSearch: false
   BookServiceWorker: false
