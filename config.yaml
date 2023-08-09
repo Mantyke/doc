@@ -1,4 +1,4 @@
-baseURL: https://whale.mantyke.icu
+baseURL: /
 
 # Book configuration
 disablePathToLower: true  # 禁用路径小写化
@@ -75,7 +75,7 @@ params:
 
   # 搜索（进行中）
   search:
-    enableSemanticSearch: false
+    enableSemanticSearch: true
     operandApiKey: "REPLACE-WITH-YOUR-OPERAND-API-KEY"
     operandIndexId: "REPLACE-WITH-YOUR-OPERAND-INDEX-ID"
 
