@@ -118,17 +118,16 @@ toc: ${toc}
     
 ---
 
-本篇文章使用[Notion](https://notion.so)创作，由我的[自动化工具](https://scarsu.com/notion_to_blog)从Notion同步。
 `
     console.log(`构建文章《${title}》成功\n`);
     // console.log(content);
-    const filePath = `./content/${slug}.md`;
+    const filePath = `./content/${date}+{slug}.md`;
     if (fs.existsSync(filePath)) {
       fs.writeFileSync(filePath, "");
     }
     fs.appendFile(filePath, content, { encoding: 'utf8' }, function (err) {
       if (err) throw err;
-      console.log(`写入文件${slug}.md成功`);
+      console.log(`写入文件${date}+{slug}.md成功`);
     });
   });
 }
